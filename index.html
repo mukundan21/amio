@@ -2,10 +2,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AMIO Unisex Family Salon – Chromepet, Chennai</title>
-<link rel="icon" type="image/png" sizes="32x32" href="miologo.png">
+<title>AMIO Unisex Family Salon – Chromepet, Chennai </title>
+<link rel="icon" type="image/png" sizes="32x32" href="cbar.jpeg">
 <link rel="icon" type="image/png" sizes="16x16" href="miologo.png">
 <link rel="apple-touch-icon" href="miologo.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -212,8 +213,14 @@
     100% { transform: translateX(100%); }
   }
 
-  .hero-content { position: relative; z-index: 2; text-align: left; max-width: 900px; padding: 0 48px; }
-
+.hero-content{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:20px; /* spacing between elements */
+}
   .hero-tag {
     font-size: 0.7rem;
     letter-spacing: 0.4em;
@@ -616,6 +623,24 @@
     .snip-divider { margin: 36px 0; padding: 0 16px; }
     .cursor, .cursor-ring { display: none; }
   }
+
+  .hero-image{
+  width:100%;
+  max-width:700px;
+  height:auto;
+  margin-top:120px;
+  filter:drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+  transition:0.3s ease;
+}
+.hero-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+.hero-image:hover{
+  transform:scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -666,20 +691,30 @@
     </svg>
   </div>
   <div class="hero-content">
-    <div class="hero-tag"><span></span> Chromepet, Chennai <span></span></div>
-    <h1 class="hero-title">
-      <span class="line">AMIO</span>
-      <span class="line">UNISEX</span>
-      <span class="line">SALON</span>
-    </h1>
-    <p class="hero-sub">Where every family member finds their perfect look.</p>
-    <div class="hero-actions">
-      <a href="tel:+919566094566" class="btn-primary">✂ &nbsp;Call Now</a>
-      <a href="https://wa.me/919566094566?text=Hi%20I%20want%20to%20book%20an%20appointment%20at%20AMIO%20Salon" target="_blank" class="btn-whatsapp"> <i class="fa fa-whatsapp" style="font-size:36px"></i></a>
-      <a href="https://instagram.com/amio_radhanagar" target="_blank" class="btn-insta"> <i class="fab fa-instagram" style="font-size:36px"></i></a>      
-      <a href="#services" class="btn-secondary">Explore Services →</a>
-    </div>
+  <img src="miologo.png" alt="AMIO Salon" class="hero-image">
+  <div class="hero-tag">
+    <span></span> Chromepet, Chennai <span></span>
   </div>
+
+  <p class="hero-sub">
+    Where every family member finds their perfect look.
+  </p>
+
+  <div class="hero-actions">
+    <a href="tel:+919566094566" class="btn-primary">✂ &nbsp;Call Now</a>
+
+    <a href="https://wa.me/919566094566?text=Hi%20I%20want%20to%20book%20an%20appointment%20at%20AMIO%20Salon" target="_blank" class="btn-whatsapp">
+      <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <a href="https://instagram.com/amio_radhanagar" target="_blank" class="btn-insta">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="#services" class="btn-secondary">Explore Services →</a>
+  </div>
+
+</div>
   <div class="hero-rating">
     <div class="rating-num">4.8</div>
     <div class="rating-stars">★ ★ ★ ★ ★</div>
