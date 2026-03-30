@@ -224,7 +224,7 @@
   position: relative;   /* remove absolute */
   z-index: 2;
   padding: 0 20px;
-  margin-top: 60px;     /* pushes content slightly down */
+  margin-top: 20px;     /* pushes content slightly down */
 }
   .hero-tag {
     font-size: 0.7rem;
@@ -233,6 +233,7 @@
     color: var(--gold);
     margin-bottom: 24px;
     display: flex;
+    transform: translateY(-100px);
     align-items: center;
     gap: 12px;
   }
@@ -606,6 +607,7 @@
       max-width: 80%; /* Ensure the logo doesn't take over the whole screen */
     }
 
+    .hero-rating { bottom: 24px; right:24px; }
     .section { padding: 48px 16px; }
     .section-title { font-size: clamp(2rem, 8vw, 2.8rem); margin-bottom: 32px; }
 
