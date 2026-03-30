@@ -219,7 +219,12 @@
   align-items:center;
   justify-content:center;
   text-align:center;
-  gap:20px; /* spacing between elements */
+  gap:16px;
+
+  position: relative;   /* remove absolute */
+  z-index: 2;
+  padding: 0 20px;
+  margin-top: 60px;     /* pushes content slightly down */
 }
   .hero-tag {
     font-size: 0.7rem;
@@ -591,25 +596,11 @@
       height: auto; /* Allow the hero to grow with content */
       min-height: 100vh;
     }
-    .hero-content {
-      position: relative; /* Change from absolute */
-      top: 0; 
-      left: 0;
-      transform: none;
-      padding: 0 20px;
-      width: 100%;
-      margin-bottom: 40px; /* Space before the rating */
     }
     .hero-actions { flex-direction: column; align-items: flex-start; gap: 10px; }
     .hero-actions a { width: 100%; justify-content: center; }
-    .hero-rating {
-      position: relative; /* Change from absolute */
-      bottom: 0;
-      right: 0;
-      text-align: center; /* Center the rating for better mobile symmetry */
-      margin: 20px 0 60px; /* Add breathing room at the bottom */
-      width: 100%;
-    }    .scroll-indicator { display: none; }
+    
+        .scroll-indicator { display: none; }
     .hero-image {
       margin-top: 20px; /* Reduce top margin since we added padding to .hero */
       max-width: 80%; /* Ensure the logo doesn't take over the whole screen */
@@ -647,7 +638,7 @@
 
     .snip-divider { margin: 36px 0; padding: 0 16px; }
     .cursor, .cursor-ring { display: none; }
-  }
+  
 
   .hero-image{
   width:100%;
@@ -657,12 +648,7 @@
   filter:drop-shadow(0 10px 20px rgba(0,0,0,0.6));
   transition:0.3s ease;
 }
-.hero-content{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-}
+
 .hero-image:hover{
   transform:scale(1.05);
 }
