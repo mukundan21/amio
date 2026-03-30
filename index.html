@@ -309,8 +309,14 @@
   }
   .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
-  .hero-rating { position: absolute; bottom: 48px; right: 48px; text-align: right; animation: fadeIn 2s ease both; animation-delay: 1s; }
-  .rating-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--gold); line-height: 1; }
+.hero-rating {
+      position: relative; /* Change from absolute */
+      bottom: 0;
+      right: 0;
+      text-align: center; /* Center the rating for better mobile symmetry */
+      margin: 20px 0 60px; /* Add breathing room at the bottom */
+      width: 100%;
+    }  .rating-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; color: var(--gold); line-height: 1; }
   .rating-stars { font-size: 0.8rem; letter-spacing: 0.2em; margin: 4px 0; }
   .rating-count { font-size: 0.7rem; color: var(--grey); letter-spacing: 0.15em; text-transform: uppercase; }
 
@@ -633,7 +639,7 @@
   transition:0.3s ease;
 }
 .hero-content{
-  position:absolute;
+  position:relative;
   top:50%;
   left:50%;
   transform:translate(-50%, -50%);
